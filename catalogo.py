@@ -5,7 +5,7 @@ import pandas as pd
 API_KEY = 'f4361b8e93884b5489d61b6e218415c2'
 
 # Função para buscar filmes
-def buscar_filmes(pagina=1):
+def buscar_filmes(pagina=10):
     url = f'https://api.themoviedb.org/3/movie/popular?api_key={API_KEY}&language=pt-BR&page={pagina}'
     resposta = requests.get(url)
     return resposta.json()
@@ -53,6 +53,6 @@ filmes_extraidos = extrair_dados(dados_filmes)
 
 # Criar um DataFrame e exportar para Excel
 df = pd.DataFrame(filmes_extraidos)
-df.to_excel('filmes.xlsx', index=False)
+df.to_excel('filmes10.xlsx', index=False)
 
 print("Os dados dos filmes foram exportados para 'filmes.xlsx'.")
