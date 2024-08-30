@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Recomendação de Filmes</title>
+</head>
+<body>
+    <h1>Recomendador de Filmes</h1>
+    <form action="/recommend" method="post">
+        <label for="genre">Selecione o Gênero:</label>
+        <select name="genre" id="genre">
+            {% for genre in genres %}
+                <option value="{{ genre }}">{{ genre }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Recomendar Filmes">
+    </form>
+</body>
+</html>
