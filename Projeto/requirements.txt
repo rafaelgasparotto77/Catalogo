@@ -1,4 +1,0 @@
-Flask
-joblib
-pandas
-tensorflow  # Isso inclui Keras
